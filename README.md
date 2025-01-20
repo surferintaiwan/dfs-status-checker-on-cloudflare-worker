@@ -32,10 +32,19 @@ This function performs the following actions:
 4. If an error occurs during the check, sends an error message to Slack.
 
 ## How to Use
+### Method 1: use cloudflare wrangler CLI to deploy index.js and wrangler.toml
 
-1. Deploy the code to cloudflare worker
-2. Set up the necessary environment variables, especially the `SLACK_WEBHOOK_URL`.
-3. The function will automatically run every 5 minutes. You can also trigger it manually via an HTTP request.
+### Method 2: use cloudflare to deploy
+1. you can actually just copy the code from index.js and paste it into the online editor for the Cloudflare worker.
+<img width="775" alt="Screenshot 2025-01-20 at 11 21 53 PM" src="https://github.com/user-attachments/assets/23f9997e-7f4f-420f-8d29-84c1cecfc60a" />
+
+
+2. Setting > Variable and Secret: Replace env SLACK_WEBHOOK_URL with your own.
+<img width="733" alt="Screenshot 2025-01-20 at 11 22 13 PM" src="https://github.com/user-attachments/assets/fcf95122-00c6-404a-a2e4-f582dfea63f6" />
+
+3. Setting > Trigger events: Set to run every 5 minutes
+ <img width="728" alt="Screenshot 2025-01-20 at 11 22 27 PM" src="https://github.com/user-attachments/assets/3e11d2a1-e9d7-4e25-8748-4df45216e222" />
+
 
 ## Error Handling
 
